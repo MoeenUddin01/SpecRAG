@@ -1,8 +1,8 @@
 # SpecRAG Project Progress Tracker
 
 ## Overall Project Status: 🚀 **In Progress**
-- **Current Phase:** Phase 1 — Core Infrastructure (`src/core/`)
-- **Last Updated:** 2026-08-16
+- **Current Phase:** Phase 2 — Data Ingestion & Preprocessing (`src/ingestion/`)
+- **Last Updated:** 2026-08-17
 
 ---
 
@@ -13,26 +13,28 @@
 - [x] Define modular folder structure ([CLAUDE.md](file:///home/moeen/projects/SpecRAG/CLAUDE.md)).
 - [x] Create core specifications:
   - [x] [specs/data_ingestion.md](file:///home/moeen/projects/SpecRAG/specs/data_ingestion.md)
+  - [x] [specs/preprocessing.md](file:///home/moeen/projects/SpecRAG/specs/preprocessing.md)
   - [x] [specs/vector_storage.md](file:///home/moeen/projects/SpecRAG/specs/vector_storage.md)
   - [x] [specs/agent_tools.md](file:///home/moeen/projects/SpecRAG/specs/agent_tools.md)
 - [x] Setup `.env.example` secrets template.
 
 ---
 
-### **Phase 1: Core Infrastructure & Configuration (`src/core/`)** ⏳
-- [ ] Implement environment variable loader and validator (`src/core/config.py`).
-- [ ] Setup logging system (`src/core/logger.py`).
-- [ ] Write unit tests for configuration and logging (`tests/test_core.py`).
-- [ ] Verify Phase 1 completion.
+### **Phase 1: Core Infrastructure & Configuration (`src/core/`)** ✅
+- [x] Implement environment variable loader and validator ([src/core/config.py](file:///home/moeen/projects/SpecRAG/src/core/config.py)).
+- [x] Setup logging system ([src/core/logger.py](file:///home/moeen/projects/SpecRAG/src/core/logger.py)).
+- [x] Write unit tests for configuration and logging ([tests/test_core.py](file:///home/moeen/projects/SpecRAG/tests/test_core.py)).
+- [x] Verify Phase 1 completion (6/6 tests passed).
 
 ---
 
-### **Phase 2: Data Ingestion Pipeline (`src/ingestion/`)** ⏳
+### **Phase 2: Data Ingestion & Preprocessing Pipeline (`src/ingestion/`)** ⏳
 - [ ] Implement `DocumentLoader` for `.txt` and `.md` (`src/ingestion/loader.py`).
+- [ ] Implement `DocumentPreprocessor` for text cleaning (`src/ingestion/preprocessor.py`).
 - [ ] Implement `DocumentSplitter` using `RecursiveCharacterTextSplitter` (`src/ingestion/splitter.py`).
 - [ ] Extend `DocumentLoader` for `.pdf` support.
-- [ ] Write unit tests for document loading and splitting (`tests/test_ingestion.py`).
-- [ ] Verify Phase 2 completion against [specs/data_ingestion.md](file:///home/moeen/projects/SpecRAG/specs/data_ingestion.md).
+- [ ] Write unit tests for loading, preprocessing, and splitting (`tests/test_ingestion.py`, `tests/test_preprocessing.py`).
+- [ ] Verify Phase 2 completion against [specs/data_ingestion.md](file:///home/moeen/projects/SpecRAG/specs/data_ingestion.md) and [specs/preprocessing.md](file:///home/moeen/projects/SpecRAG/specs/preprocessing.md).
 
 ---
 

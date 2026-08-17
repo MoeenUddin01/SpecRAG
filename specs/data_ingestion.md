@@ -29,7 +29,7 @@ src/ingestion/
    - Reads files or directories.
    - Returns a list of `langchain_core.documents.Document` instances.
 2. `DocumentSplitter` (`src/ingestion/splitter.py`):
-   - Accepts loaded `Document` list.
+   - Accepts loaded `Document` list (post-preprocessing via `preprocessing.md`).
    - Splits text into chunks with defined `chunk_size` (default: 1000) and `chunk_overlap` (default: 200).
 
 ---
@@ -41,7 +41,7 @@ src/ingestion/
 - **Output:** List of raw `Document` objects.
 
 ### `DocumentSplitter.split_documents(documents: list[Document]) -> list[Document]`
-- **Input:** List of raw `Document` objects.
+- **Input:** List of `Document` objects.
 - **Output:** List of chunked `Document` objects with updated metadata (`chunk_id`, `source`, `total_chunks`).
 
 ---
@@ -58,3 +58,5 @@ src/ingestion/
 ## 6. Verification Plan
 - Unit test document loading against mock text files in `tests/test_ingestion.py`.
 - Verify chunk length constraint ($len \le chunk\_size$) and chunk overlap presence.
+
+
